@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from .views import LoginView
+from .views import test_api
+from .views import get_hotels
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/login/', LoginView.as_view(), name='login'),
+    path('api/test/', test_api),
+    path('api/hotels/', get_hotels),  # API Endpoint for hotels
 ]
